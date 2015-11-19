@@ -52,7 +52,7 @@ def url2bibtext(url):
 
     if out == '' or out == NOT_FOUND:
         return None
-    return (url.strip(), out.strip())
+    return out.strip()
 
 def process(slack, msg):
   users = slack.server.users
