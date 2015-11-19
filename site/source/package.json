@@ -1,0 +1,21 @@
+{
+  "name": "BibBot",
+  "version": "0.0.1",
+  "main": "app/app.jsx",
+  "scripts": {
+    "dev": "webpack --progress --colors --watch --content-base build",
+    "dev_build": "webpack --progress --colors --content-base build"
+  },
+  "author": "Joseph Chee Chang <josephcc.cmu@gmail.com>",
+  "license": "",
+  "dependencies": {
+    "director": "^1.2.8",
+    "react": "^0.13.2"
+  },
+  "devDependencies": {
+    "babel-core": "^5.1.11",
+    "babel-loader": "^5.0.0",
+    "jsx-loader": "^0.13.1",
+    "webpack": "^1.9.11"
+  }
+}

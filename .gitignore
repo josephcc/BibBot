@@ -4,3 +4,6 @@ venv/
 *.pyc
 config.py
 
+
+dist/
+node_modules/
