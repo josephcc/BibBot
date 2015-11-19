@@ -27,6 +27,8 @@ export default class MainPage extends React.Component {
   }
 
   render() {
+    var urlRE = /<https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:;%_\+.~#?&//=]*)>/g;
+
     return (
       <div id='main_page'>
       { this.state.citations.map( function(cite) {
@@ -37,8 +39,11 @@ export default class MainPage extends React.Component {
             <div className='channel'>{'#' + cite.channel}</div>
             <div className='user'>{'@' + cite.user}</div>
             <div className='time'>{'-' + cite.time}</div>
-            <div className='text'>{'> ' + cite.text}</div>
+            <div className='text'>{'> ' + cite.text.replace(urlRE, '(link)')}</div>
             <a href={cite.url} className='url' target="_blank">link</a>
+            <pre className='raw_bibtex'>
+              {cite.bibtex}
+            </pre>
             <script type='text/template' className='bibtex_input' id={"bibtex_" + cite.id}>
               {cite.bibtex}
             </script>
