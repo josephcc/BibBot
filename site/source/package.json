@@ -10,7 +10,8 @@
   "license": "",
   "dependencies": {
     "director": "^1.2.8",
-    "react": "^0.13.2"
+    "react": "^0.13.2",
+    "xhttp": "0.0.9"
   },
   "devDependencies": {
     "babel-core": "^5.1.11",
