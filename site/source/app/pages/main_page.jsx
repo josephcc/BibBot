@@ -33,8 +33,8 @@ export default class MainPage extends React.Component {
 
   render() {
     var urlRE = /<https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:;%_\+.~#?&//=]*)>/g;
-    var buttonStyle = {fontSize: '80%', paddingTop: '3px', paddingBottom: '4px', paddingLeft: '6px', paddingRight: '6px', margin: '2px'};
-    var codeStyle = {display: 'none', border: '1px solid lightgray', background: '#efefef', padding: '10px', marginTop: '1px'};
+    var buttonStyle = {fontSize: '78%', paddingTop: '3px', paddingBottom: '4px', paddingLeft: '6px', paddingRight: '6px', margin: '2px', fontFamily: 'Inconsolata'};
+    var codeStyle = {display: 'none', border: '1px solid lightgray', background: '#efefef', padding: '10px', marginTop: '1px', fontFamily: 'Inconsolata'};
 
     return (
       <div id='main_page' className='pure-g'>
@@ -66,14 +66,14 @@ export default class MainPage extends React.Component {
         <div className='pure-u-0 pure-u-sm-0-24 pure-u-md-2-24 pure-u-lg-4-24 pure-u-xl-6-24'></div>
     <script id="bibtex-conference-template" type="text/template">
         <div className="bibtex_conference_template">
-            <div className="if author" style={{fontWeight: 'bold', fontSize: 'medium', paddingTop: '30px'}}>
+            <div className="if author" style={{fontFamily: 'Roboto', fontWeight: '500', fontSize: 'medium', paddingTop: '30px'}}>
                 <span className="title"></span>
                 <span className="if year"> (<span className="conference" style={{color: '#000'}}></span><span className="year" style={{color: '#000'}}></span>)</span>
                 <span className="if url" style={{marginLeft: '20px'}}>
                     <a className="url" style={{color: 'black', fontSize: 'small'}}>(view online)</a>
                 </span>
             </div>
-            <div style={{marginLeft: '10px', marginBottom: '5px'}}>
+            <div style={{marginLeft: '10px', marginBottom: '5px', fontFamily: 'Roboto', fontWeight: '300'}}>
                 <span className="author"></span>. <span className="booktitle"></span>.
             </div>
         </div>
