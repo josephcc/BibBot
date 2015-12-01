@@ -39,14 +39,15 @@ def extract_urls(text):
   urls = map(itemgetter(0), urls)
   return urls
 
+GSCHOLAR_PATH = 'venv/lib/python2.7/site-packages/gscholar/gscholar.py'
 NOT_FOUND = 'No results found, try again with a different query!'
 def url2bibtext(url):
-    out = _CMD('python venv/lib/python2.7/site-packages/gscholar/gscholar.py "%s"' % url).strip()
+    out = _CMD('python %s "%s"' % (GSCHOLAR_PATH, url)).strip()
     inturruptable_sleep(GOOGLE_SLEEP)
     if out == '' or out == NOT_FOUND and 'pdf' in url.lower():
         filename = str(uuid.uuid4())
         _CMD('wget -O "%s" "%s"' % (filename, url))
-        out = _CMD('python venv/lib/python2.7/site-packages/gscholar/gscholar.py "%s"' % filename).strip()
+        out = _CMD('python %s "%s"' % (GSCHOLAR_PATH, filename)).strip()
         _CMD('rm "%s"' % filename)
         inturruptable_sleep(GOOGLE_SLEEP)
 
